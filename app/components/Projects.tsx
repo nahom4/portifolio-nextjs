@@ -77,30 +77,33 @@ export function Projects() {
       year: "2024",
     },
     {
-      title: "Weather Dashboard",
+      title: "Texas Hold’em Poker Game",
       description:
-        "An interactive weather dashboard with beautiful visualizations, forecasts, and location-based weather data.",
+      `A full-stack poker game project implementing accurate Texas Hold’em rules using PokerKit,
+       FastAPI, and Next.js. The system follows Clean Architecture principles, is dockerized for portability, 
+       and deployed for production use. Features an intuitive, responsive interface with smooth gameplay, 
+       showcasing both backend robustness and a user-friendly frontend.`,
       image:
-        "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop",
-      technologies: ["React", "D3.js", "OpenWeatherMap API", "Chart.js"],
-      liveUrl: "#",
-      githubUrl: "#",
+        "poker_game.png",
+      technologies: ["React", "Next.js", "FastAPI", "Tailwind CSS", "Zustand", "PostgreSQL", "PokerKit", "shadcn/ui", "Docker"],
+      liveUrl: "https://pocker-game-flame.vercel.app/",
+      githubUrl: "https://github.com/nahom4/pocker_game",
       featured: false,
-      category: "Data Viz",
-      year: "2023",
+      category: "Full stack, Game",
+      year: "2024",
     },
     {
       title: "Portfolio Website",
       description:
         "A modern, responsive portfolio website with smooth animations, dark mode support, and optimized performance.",
       image:
-        "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
+        "portifolio.png",
       technologies: ["Next.js", "Framer Motion", "Tailwind CSS", "TypeScript"],
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "https://portifolio-nextjs-ten.vercel.app/",
+      githubUrl: "https://github.com/nahom4/portifolio-nextjs",
       featured: false,
       category: "Portfolio",
-      year: "2024",
+      year: "2025",
     },
     {
       title: "AI Chat Interface",
@@ -116,17 +119,20 @@ export function Projects() {
       year: "2024",
     },
     {
-      title: "Social Media Dashboard",
+      title: "Udemy clone",
       description:
-        "A comprehensive social media management platform with analytics, scheduling, and multi-platform integration.",
+      `A pixel-perfect clone of the Udemy website UI built with Vue.js.
+       Converted Figma designs to HTML, implementing a highly responsive and accurate layout.
+       Styled using Tailwind CSS and Vuetify to closely match the original design, 
+       showcasing attention to detail and front-end craftsmanship.`,
       image:
-        "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop",
-      technologies: ["Vue.js", "Python", "FastAPI", "PostgreSQL"],
-      liveUrl: "#",
-      githubUrl: "#",
+        "udemy_clone.png",
+      technologies: ["Vue.js", "Vuetify", "Tailwind CSS"],
+      liveUrl: "https://udemy-clone-nahom-qfg5.vercel.app/",
+      githubUrl: "https://github.com/nahom4/udemy-clone-nahom",
       featured: false,
-      category: "SaaS",
-      year: "2023",
+      category: "Front end",
+      year: "2025",
     },
   ];
 
