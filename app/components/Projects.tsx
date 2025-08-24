@@ -106,19 +106,6 @@ export function Projects() {
       year: "2025",
     },
     {
-      title: "AI Chat Interface",
-      description:
-        "An intelligent chat interface with natural language processing, context awareness, and beautiful UI components.",
-      image:
-        "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop",
-      technologies: ["React", "OpenAI API", "WebSocket", "Tailwind CSS"],
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: true,
-      category: "AI/ML",
-      year: "2024",
-    },
-    {
       title: "Udemy clone",
       description:
       `A pixel-perfect clone of the Udemy website UI built with Vue.js.
@@ -134,6 +121,20 @@ export function Projects() {
       category: "Front end",
       year: "2025",
     },
+    {
+      title: "A2SV Contest Central API",
+      description:
+        "Backend API built with Clean Architecture, Entity Framework, and CQRS to automate contest management, track student performance via Codeforces, and provide contest statistics and leaderboards.",
+      image:
+        "contest_central.png",
+      technologies: [".NET", "Clean Architecture","Entity Framework","OpenAI API", "CQRS"],
+      liveUrl: "https://contestcentral.onrender.com/swagger/index.html",
+      githubUrl: "https://github.com/RealEskalate/contest-central-g4-aait-team4",
+      featured: false,
+      category: "Backend",
+      year: "2023",
+    },
+    
   ];
 
   // Auto-play functionality
@@ -274,7 +275,7 @@ export function Projects() {
                         <div className="absolute bottom-4 left-4">
                           <Badge
                             variant="outline"
-                            className="bg-white/90 text-foreground border-white/20 backdrop-blur-sm"
+                            className="bg-white/90 text-black border-white/20 backdrop-blur-sm"
                           >
                             {projects[currentSlide].year}
                           </Badge>
