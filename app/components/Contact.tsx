@@ -6,15 +6,10 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Label } from "./ui/label";
-import {
-  Mail,
-  MessageSquare,
-  Send,
-  Github,
-  Linkedin,
-  Twitter,
-} from "lucide-react";
+import { Mail, MessageSquare, Send, Github, Linkedin } from "lucide-react";
 import { useState } from "react";
+import { toast } from "sonner";
+; // ✅ using your toaster
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -23,32 +18,55 @@ export function Contact() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
-  };
+  const [loading, setLoading] = useState(false);
 
   const socialLinks = [
     {
       icon: Github,
       label: "GitHub",
-      url: "https://github.com",
+      url: "https://github.com/nahom4",
       color: "hover:text-gray-700 dark:hover:text-gray-300",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      url: "https://linkedin.com",
+      url: "https://www.linkedin.com/in/nahom-amare-a89512229/",
       color: "hover:text-blue-600",
     },
-    {
-      icon: Twitter,
-      label: "Twitter",
-      url: "https://twitter.com",
-      color: "hover:text-blue-400",
-    },
   ];
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const res = await fetch("https://formspree.io/f/mkgvwvjr", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        debugger
+        toast.success("Message sent successfully!", {
+          description: "Thanks for reaching out, I’ll get back to you soon.",
+        });
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        debugger
+        toast.error("Something went wrong", {
+          description: "Please try again in a moment.",
+        });
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error("Network error", {
+        description: "Check your connection and try again later.",
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <section
@@ -67,8 +85,7 @@ export function Contact() {
             Let's Create Something Amazing
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Have a project in mind or just want to chat about technology, books,
-            or movies? I'd love to hear from you.
+            Have a project in mind? I'd love to hear from you.
           </p>
         </motion.div>
 
@@ -88,14 +105,21 @@ export function Contact() {
                 >
                   <MessageSquare className="w-6 h-6 text-primary" />
                 </motion.div>
+                <div></div>
                 <h3 className="text-xl">Send a Message</h3>
               </div>
-
+              <div className="p-4 mb-6 rounded-xl bg-primary/5 border border-primary/20 text-sm text-muted-foreground flex items-center gap-3">
+              <Send className="w-5 h-5 text-primary shrink-0" />
+              <p className="leading-relaxed">
+                It will directly land in my inbox and I will get back to you as soon as possible.
+              </p>
+            </div>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
                   <Label htmlFor="name">Name</Label>
                   <Input
                     id="name"
+                    name="name"
                     type="text"
                     value={formData.name}
                     onChange={(e) =>
@@ -111,6 +135,7 @@ export function Contact() {
                   <Label htmlFor="email">Email</Label>
                   <Input
                     id="email"
+                    name="email"
                     type="email"
                     value={formData.email}
                     onChange={(e) =>
@@ -126,6 +151,7 @@ export function Contact() {
                   <Label htmlFor="message">Message</Label>
                   <Textarea
                     id="message"
+                    name="message"
                     value={formData.message}
                     onChange={(e) =>
                       setFormData({ ...formData, message: e.target.value })
@@ -136,16 +162,18 @@ export function Contact() {
                   />
                 </div>
 
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
+                <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                   <Button
                     type="submit"
+                    disabled={loading}
                     className="w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70"
                   >
-                    <Send className="w-4 h-4 mr-2" />
-                    Send Message
+                    {loading ? "Sending..." : (
+                      <>
+                        <Send className="w-4 h-4 mr-2" />
+                        Send Message
+                      </>
+                    )}
                   </Button>
                 </motion.div>
               </form>
@@ -193,18 +221,6 @@ export function Contact() {
                   </motion.a>
                 ))}
               </div>
-            </Card>
-
-            <Card className="p-8 border-0 bg-gradient-to-br from-card to-accent/5">
-              <h4 className="text-lg mb-4">Let's Talk About</h4>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>• Web Development Projects</li>
-                <li>• UI/UX Design Challenges</li>
-                <li>• Technology Trends</li>
-                <li>• Book Recommendations</li>
-                <li>• Movie Discussions</li>
-                <li>• Problem-Solving Adventures</li>
-              </ul>
             </Card>
           </motion.div>
         </div>
