@@ -9,6 +9,7 @@ import { Interests } from './components/Interests';
 import { Contact } from './components/Contact';
 import { ThemeSwitcher } from './components/ThemeSwitcher';
 import { useEffect } from 'react';
+import { Experiences } from './components/Experiances';
 
 export default function App() {
   useEffect(() => {
@@ -28,6 +29,7 @@ export default function App() {
         <About />
         <Skills />
         <Projects />
+        <Experiences/>
         <Interests />
         <Contact />
       </div>

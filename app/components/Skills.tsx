@@ -45,9 +45,9 @@ export function Skills() {
       title: "Frontend",
       skills: [
         { name: "React/Next.js", level: "Expert", color: "from-blue-400 to-cyan-500" },
+        { name: "HTML and CSS", level: "Expert", color: "from-blue-400 to-cyan-500" },
         { name: "Angular", level: "Advanced", color: "from-red-400 to-orange-500" },
-        { name: "Responsive Design & Accessibility", level: "Advanced", color: "from-teal-400 to-blue-500" },
-        { name: "UI/UX Design (Figma)", level: "Advanced", color: "from-pink-400 to-rose-500" },
+        { name: "Vue.js", level: "Intermediate", color: "from-green-400 to-emerald-500" },
       ],
       color: "text-blue-500",
       bgColor: "from-blue-500/10 to-cyan-500/5",
