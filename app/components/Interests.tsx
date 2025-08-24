@@ -25,49 +25,74 @@ export function Interests() {
   const favoriteBooks = [
     {
       title: "Clean Code",
-      author: "Robert Martin",
+      author: "Robert C. Martin",
       genre: "Programming",
       image:
-        "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=300&h=400&fit=crop",
+        "https://m.media-amazon.com/images/I/41xShlnTZTL._SX374_BO1,204,203,200_.jpg", // Amazon cover
       rating: 5,
       quote:
         "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
       color: "from-blue-500 to-cyan-500",
     },
     {
-      title: "Dune",
-      author: "Frank Herbert",
-      genre: "Sci-Fi",
+      title: "The Pragmatic Programmer",
+      author: "Andrew Hunt & David Thomas",
+      genre: "Programming",
       image:
-        "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=300&h=400&fit=crop",
+        "https://m.media-amazon.com/images/I/41as+WafrFL._SX329_BO1,204,203,200_.jpg", // 20th Anniversary Edition
       rating: 5,
       quote:
-        "Fear is the mind-killer. Fear is the little-death that brings total obliteration.",
+        "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.",
+      color: "from-purple-500 to-pink-500",
+    },
+    {
+      title: "Docker Deep Dive",
+      author: "Nigel Poulton",
+      genre: "Programming",
+      image:
+        "https://m.media-amazon.com/images/I/71Bkk+WVLsL._UF1000,1000_QL80_.jpg", // Actual Docker Deep Dive cover
+      rating: 5,
+      quote:
+        "Learn Docker in depth — the de facto book for understanding containers and how to run them in production.",
       color: "from-orange-500 to-red-500",
+    },
+    {
+      title:
+        "Clean Architecture: A Craftsman's Guide to Software Structure and Design",
+      author: "Robert C. Martin",
+      genre: "Programming",
+      image:
+        "https://m.media-amazon.com/images/I/41-sN-mzwKL._SX258_BO1,204,203,200_.jpg", // Corrected cover
+      rating: 4,
+      quote:
+        "The goal of software architecture is to minimize the human resources required to build and maintain a system.",
+      color: "from-green-500 to-emerald-500",
+    },
+    {
+      title: "Harry Potter Series",
+      author: "J.K. Rowling",
+      genre: "Fantasy",
+      image:
+        "https://m.media-amazon.com/images/I/51UoqRAxwEL._SX331_BO1,204,203,200_.jpg", // Bundle cover for HP series
+      rating: 5,
+      quote:
+        "Whether you come back by page or by the big screen, Hogwarts will always be there to welcome you home.",
+      color: "from-indigo-500 to-purple-500",
     },
     {
       title: "Atomic Habits",
       author: "James Clear",
       genre: "Self-Help",
       image:
-        "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=300&h=400&fit=crop",
-      rating: 4,
-      quote:
-        "You do not rise to the level of your goals. You fall to the level of your systems.",
-      color: "from-green-500 to-emerald-500",
-    },
-    {
-      title: "The Pragmatic Programmer",
-      author: "David Thomas",
-      genre: "Programming",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop",
+        "https://m.media-amazon.com/images/I/51-nXsSRfZL._SX329_BO1,204,203,200_.jpg", // Official cover
       rating: 5,
       quote:
-        "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.",
-      color: "from-purple-500 to-pink-500",
+        "You do not rise to the level of your goals. You fall to the level of your systems.",
+      color: "from-teal-500 to-cyan-500",
     },
   ];
+  
+  
 
   const favoriteMovies = [
     {
@@ -75,50 +100,40 @@ export function Interests() {
       director: "Christopher Nolan",
       genre: "Sci-Fi/Thriller",
       year: "2010",
-      image:
-        "https://images.unsplash.com/photo-1489599904417-819c51982c4c?w=400&h=600&fit=crop",
+      image: "https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg",
       rating: 5,
-      insight:
-        "Layers of reality mirror the complexity of software architecture - beautiful and mind-bending.",
+      insight: "Layers of reality mirror the complexity of software architecture—beautiful and mind-bending.",
       color: "from-indigo-500 to-purple-500",
     },
     {
-      title: "The Social Network",
-      director: "David Fincher",
-      genre: "Drama/Biography",
-      year: "2010",
-      image:
-        "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=600&fit=crop",
+      title: "Star Wars Franchise",
+      genre: "Sci-Fi/Adventure",
+      year: "1979 - Present",
+      image: "https://m.media-amazon.com/images/M/MV5BOTAzODEzNDAzMl5BMl5BanBnXkFtZTgwMDU1MTgzNzE@._V1_FMjpg_UX1000_.jpg",
       rating: 4,
-      insight:
-        "The human story behind technology - ambition, friendship, and the price of innovation.",
-      color: "from-blue-500 to-teal-500",
+      insight: "A nostalgic return to the galaxy far, far away, blending classic elements with new heroes and villains.",
+      color: "from-gray-700 to-slate-800",
     },
     {
-      title: "Her",
-      director: "Spike Jonze",
-      genre: "Romance/Sci-Fi",
-      year: "2013",
-      image:
-        "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=600&fit=crop",
+      title: "Marvel Cinematic Universe (MCU)",
+      genre: "Action/Superhero",
+      year: "2008–present",
+      image: "https://variety.com/wp-content/uploads/2014/04/01-avengers-2012.jpg?w=1000&h=667&crop=1",
       rating: 5,
-      insight:
-        "AI and human connection - a beautiful exploration of our relationship with technology.",
-      color: "from-rose-500 to-pink-500",
+      insight: "A groundbreaking cinematic universe that redefined interconnected storytelling across multiple films.",
+      color: "from-blue-500 to-indigo-600",
     },
     {
-      title: "Ex Machina",
-      director: "Alex Garland",
-      genre: "Sci-Fi/Drama",
-      year: "2014",
-      image:
-        "https://images.unsplash.com/photo-1566438480900-0609be27a4be?w=400&h=600&fit=crop",
-      rating: 4,
-      insight:
-        "A haunting exploration of consciousness, ethics, and the future of artificial intelligence.",
-      color: "from-gray-500 to-slate-600",
+      title: "Harry Potter Series",
+      genre: "Fantasy/Adventure",
+      year: "2001–2011",
+      image: "https://m.media-amazon.com/images/I/81YOuOGFCJL._AC_SY679_.jpg",
+      rating: 5,
+      insight: "A magical journey through the wizarding world, exploring themes of friendship, bravery, and destiny.",
+      color: "from-yellow-500 to-orange-600",
     },
   ];
+  
 
   // Auto-play for books
   useEffect(() => {
@@ -236,11 +251,11 @@ export function Interests() {
                       <h4 className="text-sm font-medium line-clamp-2 mb-1">
                         {item.title}
                       </h4>
-                      <p className="text-xs text-muted-foreground">
+                      {/* <p className="text-xs text-muted-foreground">
                         {type === "book"
                           ? `by ${item.author}`
                           : `${item.director} (${item.year})`}
-                      </p>
+                      </p> */}
                     </div>
                     <Badge
                       variant="outline"
