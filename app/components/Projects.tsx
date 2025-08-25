@@ -86,7 +86,7 @@ export function Projects() {
       image:
         "poker_game.png",
       technologies: ["React", "Next.js", "FastAPI", "Tailwind CSS", "Zustand", "PostgreSQL", "PokerKit", "shadcn/ui", "Docker"],
-      liveUrl: "https://pocker-game-flame.vercel.app/",
+      liveUrl: "https://pocker-game-zeta.vercel.app/",
       githubUrl: "https://github.com/nahom4/pocker_game",
       featured: false,
       category: "Full stack, Game",
