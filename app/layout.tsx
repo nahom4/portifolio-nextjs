@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "./components/ui/sonner";
+import Script from "next/script"; // <-- import Script
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +29,20 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* Google Analytics Scripts */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-LNH2B0K7Z7"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-LNH2B0K7Z7');
+          `}
+        </Script>
+
         {children}
         <Toaster richColors position="top-right" />
       </body>
