@@ -51,7 +51,7 @@ export function Projects() {
       year: "2025",
     },
     {
-      title: "Ministry of Education Exam Result Portal",
+      title: "Distributed Exam Result Portal",
       description:
         `Designed and prototyped a fault-tolerant exam result portal inspired to support 500k+ concurrent users, 
         featuring geo-based load balancing to route traffic to the nearest healthy server, secure RPC authentication,
@@ -129,7 +129,7 @@ export function Projects() {
         "contest_central.png",
       technologies: [".NET", "Clean Architecture","Entity Framework","OpenAI API", "CQRS"],
       liveUrl: "https://contestcentral.onrender.com/swagger/index.html",
-      githubUrl: "https://github.com/RealEskalate/contest-central-g4-aait-team4",
+      githubUrl: "https://github.com/nahom4/contest-central-g4-aait-team4",
       featured: false,
       category: "Backend",
       year: "2023",
@@ -308,6 +308,7 @@ export function Projects() {
                                     {tech}
                                   </Badge>
                                 </motion.div>
+                                
                               )
                             )}
                           </div>
